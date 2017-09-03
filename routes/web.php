@@ -16,3 +16,4 @@ Route::get('/', 'CariController@index2');
 
 Route::get('/pencairan', 'PencairanController@index');
 Route::get('/pencairan/showmahasiswa/{sk_id}', 'PencairanController@showmahasiswa');
+Route::post('/carinrp', 'PencairanController@carinrp');

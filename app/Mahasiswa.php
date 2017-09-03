@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mahasiswa extends Model
 {
-    public $table = "mahassiwa";
+    public $table = "mahasiswa";
     public $fillable = array(
     	'nim_mahasiswa',
     	'nama_mahasiswa',

@@ -18,4 +18,9 @@ class PencairanController extends Controller
     	$data = DB::table('mahasiswa')->select('*')->where('sk_id', '=', $sk_id)->get();
     	return view ('pencairan.mahasiswa', compact('data'));
     }
+
+    public function carinrp(Request $request) {
+      $cari = Mahasiswa::query()->join('sk', 'sk.id_sk','=','mahasiswa.sk_id')->where('nim_mahasiswa','=', $request->nrp)->get();
+      return view('pencairan.hasil', compact('cari'));
+    }
 }
