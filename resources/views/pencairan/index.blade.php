@@ -47,7 +47,7 @@
                 @foreach ($data as $key)
                 	<tr>
                 		<td style="text-align: center; vertical-align: middle; ">{{ $indexNo++ }}</td>
-                		<td style="text-align: center; vertical-align: middle; ">{{ $key->tanggal_pengajuan_sk }}</td>
+                		<td style="text-align: center; vertical-align: middle; "><?php echo date('d F Y', strtotime($key->tanggal_pengajuan_sk)) ?></td>
                 		<td style="text-align: center; vertical-align: middle; ">{{ $key->tahun_sk }}</td>
                 		<td style="text-align: center; vertical-align: middle; ">{{ $key->nomor_sk }}</td>
                 		<td style="text-align: center; vertical-align: middle; ">{{ $key->jenis_sk }}</td>

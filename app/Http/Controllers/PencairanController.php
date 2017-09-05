@@ -20,7 +20,8 @@ class PencairanController extends Controller
     }
 
     public function carinrp(Request $request) {
-      $cari = Mahasiswa::query()->join('sk', 'sk.id_sk','=','mahasiswa.sk_id')->where('nim_mahasiswa','=', $request->nrp)->get();
+      $cari = Mahasiswa::query()->join('sk', 'sk.id_sk','=','mahasiswa.sk_id')->where('nim_mahasiswa','=', $request->nrp)->get()[0];
+      // dd($cari);
       return view('pencairan.hasil', compact('cari'));
     }
 }
