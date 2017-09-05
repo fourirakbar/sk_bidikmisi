@@ -52,8 +52,26 @@
                 		<td style="text-align: center; vertical-align: middle; ">{{ $key->nomor_sk }}</td>
                 		<td style="text-align: center; vertical-align: middle; ">{{ $key->jenis_sk }}</td>
                 		<td style="text-align: center; vertical-align: middle; ">{{ $key->mahasiswa_sk }}</td>
-                		<td style="text-align: center; vertical-align: middle; ">{{ $key->status_pencairan_sk }}</td>
-                		<td style="text-align: center; vertical-align: middle; ">{{ $key->status_sk }}</td>
+                		<td style="text-align: center; vertical-align: middle; ">
+                    <?php
+                      if (($key->status_pencairan_sk) == 1) {
+                        echo "Terkirim";
+                      }
+                      else {
+                        echo "Diproses";
+                      }
+                    ?>
+                    </td>
+                		<td style="text-align: center; vertical-align: middle; ">
+                    <?php
+                      if (($key->status_sk)) {
+                        echo "OK";
+                      }
+                      else {
+
+                      }
+                    ?>
+                    </td>
                 		<td style="text-align: center; vertical-align: middle; ">
                 			<input type="hidden" name="method" value="DELETE">
                         	<a class="btn btn-block btn-primary" href=""><b class="material-icons">Edit SK</b>

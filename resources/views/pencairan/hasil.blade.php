@@ -55,10 +55,6 @@
                   <th style="width: 20%; text-align: left; vertical-align: middle;padding-left: 10px;">SEMESTER</th>
                   <td colspan="5">{{ $cari->semester_mahasiswa }}</td>
                 </tr>
-                <tr>
-                  <th style="width: 20%; text-align: left; vertical-align: middle;padding-left: 10px;">BIAYA HIDUP</th>
-                  <td colspan="5">{{ $cari->biaya_hidup_mahasiswa }}</td>
-                </tr>
               </thead>
             </table>
 
